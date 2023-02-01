@@ -4,6 +4,7 @@ import java.util.Locale;
 import java.util.Scanner;
 
 import entities.Account;
+import exceptions.BusinessExceptions;
 
 public class Program {
 
@@ -35,11 +36,15 @@ public class Program {
 		System.out.print("Informe quantia para sacar: ");
 		Double amount = scanner.nextDouble();
 		
-		//realizar saque
-		account.withdraw(amount);
-		
-		//imprimir novo saldo
-		System.out.printf("Novo saldo: %.2f%n", account.getBalance());
+		try {
+			//realizar saque
+			account.withdraw(amount);
+			//imprimir novo saldo
+			System.out.printf("Novo saldo: %.2f%n", account.getBalance());
+			
+		} catch(BusinessExceptions ex){
+			System.out.println(ex.getMessage());
+		}		
 
 		scanner.close();
 	}

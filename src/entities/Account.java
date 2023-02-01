@@ -65,7 +65,7 @@ public class Account {
 	//validação do saque
 	private void validateWithdraw(Double amount) {
 		if(amount > getWithdrawLimit()) {
-			throw new BusinessExceptions("::: ERRO ::: A quantia excede o limite de saque.");
+			throw new BusinessExceptions("::: ERRO ::: Limite de saque excedido.");
 		}
 		if(amount > getBalance()) {
 			throw new BusinessExceptions("::: ERRO ::: Saldo insuficiente.");			

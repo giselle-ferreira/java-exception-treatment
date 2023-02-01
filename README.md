@@ -1,5 +1,5 @@
 >## About
-Java programa developed to simulate bank account withdraw and exception treatment.
+Java program developed to simulate a bank account withdraw with exception treatment.
 
 <br/>
 
